@@ -1,13 +1,17 @@
 import React from 'react';
-import Link from 'next/link';
 
 const Navbar = () => {
+  const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <nav className="text-white flex justify-around p-4 animate-fade-in">
-            <Link href="/" className='hover:text-blue-700'>Home</Link>
-            <Link href="/about" className='hover:text-blue-700'>About</Link>
-            <Link href="/projects" className='hover:text-blue-700'>Projects</Link>
-            <Link href="/contact" className='hover:text-blue-700'>Contact</Link>
+    <nav className="bg-gradient-to-r from-black to-gray-900 text-white flex justify-around p-4 animate-fade-in fixed top-0 w-full z-50">
+      <a onClick={() => scrollTo('home')} className='hover:text-blue-700 cursor-pointer'>Home</a>
+      <a onClick={() => scrollTo('about')} className='hover:text-blue-700 cursor-pointer'>About</a>
+      <a onClick={() => scrollTo('projects')} className='hover:text-blue-700 cursor-pointer'>Projects</a>
+      <a onClick={() => scrollTo('contact')} className='hover:text-blue-700 cursor-pointer'>Contact</a>
     </nav>
   );
 };

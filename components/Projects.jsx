@@ -11,7 +11,7 @@ const Projects = () => {
   }
 
   return (
-    <div className="p-8 bg-gradient-to-r from-black to-gray-900 h-screen text-white">
+    <div id="projects"className="pt-20 p-8 bg-gradient-to-r from-black to-gray-900 h-screen text-white">
       <motion.h2 className="text-3xl font-semibold mb-4"
       initial={{ x: '100%', opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}

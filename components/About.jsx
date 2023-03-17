@@ -4,7 +4,7 @@ import Tech from './Tech';
 
 const About = () => {
     return (
-        <div className='bg-gradient-to-r from-black to-gray-900 h-screen'>
+        <div id='about' className='pt-20 bg-gradient-to-r from-black to-gray-900 h-screen'>
             <motion.h1 className='text-5xl font-extrabold text-white ml-20'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
